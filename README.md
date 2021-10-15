@@ -12,14 +12,12 @@
 
 ![Matheus GitHub stats](https://github-readme-stats.vercel.app/api?username=carvalhobfr&show_icons=true&theme=dracula)
 
-
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=carvalhobfr&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 
 
 ## My techs 🚀
 <div style="display: flex; flex-direction: row; flex-wrap: wrap"><br/>
- 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
-[![matheus's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
  <div style="display: inline_block"><br/>
     <img align="center" alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
     <img align="center" alt="css3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -36,5 +34,4 @@
 <br/>
 
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id)
 
