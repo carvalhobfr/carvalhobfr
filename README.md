@@ -1,15 +1,17 @@
 
 ### Hi, I'm Matheus Carvalho 🖐️
 
----------------
-### Technology enthusiast, web developer currently working at INETUM, passionate about new cultures and travel. Brazilian 🇧🇷, living in Madrid 🇪🇸 and working remotely 🌍.
+
+<hr/>
+### Technology enthusiast, web developer currently working at INETUM, passionate about new cultures and travel. Brazilian  🇧🇷, living in Madrid  🇪🇸 and working remotely  🌍.
+<hr/>
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheusrcarvalho/)
 
 ![Matheus GitHub stats](https://github-readme-stats.vercel.app/api?username=carvalhobfr&show_icons=true&theme=dracula)
 
-
+<hr/>
 ## My stack 🚀
 <div style="display: flex; flex-direction: row; flex-wrap: wrap"><br/>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
