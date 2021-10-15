@@ -30,7 +30,5 @@
    <img align="center" alt="sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
 </div>
 <br/>
-<div style="display: inline_block"><br/>
  ![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id)
- </div>
 
