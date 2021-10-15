@@ -12,7 +12,7 @@
 
 ![Victor GitHub stats](https://github-readme-stats.vercel.app/api?username=carvalhobfr&show_icons=true&theme=dracula)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
 
 
 ## My techs 🚀
