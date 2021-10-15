@@ -32,6 +32,7 @@
     <img align="center" alt="MongoDB" src="https://img.shields.io/badge/MongoDB-316192?style=for-the-badge&logo=mongodb&logoColor=white">
     <img align="center" alt="sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
  </div>
+[![matheus's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
 </div>
 <br/>
 
