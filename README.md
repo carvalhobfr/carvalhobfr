@@ -3,7 +3,9 @@
 
 
 <hr/>
+
 ### Technology enthusiast, web developer currently working at INETUM, passionate about new cultures and travel. Brazilian  🇧🇷, living in Madrid  🇪🇸 and working remotely  🌍.
+
 <hr/>
 
 
@@ -14,6 +16,7 @@
 <hr/>
 ## My stack 🚀
 <div style="display: flex; flex-direction: row; flex-wrap: wrap"><br/>
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr)](https://github.com/anuraghazra/github-readme-stats)
  <div style="display: inline_block"><br/>
     <img align="center" alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
