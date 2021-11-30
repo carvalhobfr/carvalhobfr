@@ -4,7 +4,7 @@
 
 <hr/>
 
-#### Technology enthusiast, web developer currently working at INETUM, passionate about new cultures and travel. Brazilian  🇧🇷, living in Madrid  🇪🇸 and working remotely  🌍.
+#### Technology enthusiast, web developer currently working at Media Capital Digital, passionate about new cultures and travel. Brazilian  🇧🇷, living in Madrid  🇪🇸 and working remotely  🌍.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheusrcarvalho/)
 
