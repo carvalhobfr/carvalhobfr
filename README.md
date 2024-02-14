@@ -32,9 +32,9 @@
 
 
 
-<p align="center">
-  <img
-    src="https://profile-counter.glitch.me/carvalhobfr/count.svg"
-    alt="Ilustração do número de visitantes no perfil"
-  />
-</p>
+    <!-- <p align="center">
+      <img
+        src="https://profile-counter.glitch.me/carvalhobfr/count.svg"
+        alt="Ilustração do número de visitantes no perfil"
+      />
+    </p> -->
