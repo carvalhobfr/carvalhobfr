@@ -33,15 +33,6 @@ Curious by nature, passionate about technology, cultures, and travel.
 - REST APIs • Git • Agile / Scrum  
 - Clean architecture & component-driven development
 
----
-
-### 📊 GitHub Stats
-
-<p align="left">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=carvalhobfr&layout=compact&theme=default" />
-</p>
-
----
 
 ### 🌐 Connect with me
 
