@@ -4,6 +4,7 @@ Full-stack web developer with strong focus on **React, TypeScript and modern web
 Currently working at **Media Capital Digital**, building large-scale streaming and media platforms.
 
 🇧🇷 Brazilian • 🇪🇸 Living in Madrid 
+
 Curious by nature, passionate about technology, cultures, and travel.
 
 ---
