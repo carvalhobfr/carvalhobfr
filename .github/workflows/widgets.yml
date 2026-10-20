@@ -46,14 +46,17 @@ jobs:
             sed -i 's|</style>|@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>|' "$f"
             grep -q 'prefers-reduced-motion' "$f"
           done
+      # New URL whenever a widget changes, so GitHub's image proxy never serves a stale one.
+      - name: Stamp README image URLs
+        run: node scripts/stamp-assets.mjs
       - name: Commit changes
         run: |
-          if git diff --quiet -- assets && [ -z "$(git ls-files --others --exclude-standard assets)" ]; then
+          if git diff --quiet -- assets README.md && [ -z "$(git ls-files --others --exclude-standard assets)" ]; then
             echo "nothing to commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
+          git add assets README.md
           git commit -m "chore: refresh widgets"
           git push
