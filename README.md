@@ -13,16 +13,16 @@ Software Engineer: React and TypeScript on the front, Node.js on the back. Since
 
 **Stack:** React · Next.js · TypeScript · Node.js (Fastify, NestJS) · PostgreSQL · MongoDB · Docker
 
-## TVI Player since I joined
+## Current Work · TVI Player
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=8a40c371">
-  <img src="assets/impact-light.svg?v=940d03c9" alt="Since I joined Media Capital in Nov 2021: TVI Player went from hundreds of thousands of monthly users in Dec 2022, to about 1M monthly unique users in 2024, to 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. Figures published by Media Capital." width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=2021estimate">
+  <img src="assets/impact-light.svg?v=2021estimate" alt="Since I joined Media Capital in Nov 2021: TVI Player went from hundreds of thousands of monthly users around Nov 2021 (personal estimate), to about 1M monthly unique users in 2024, to 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. 2021 figure is a personal estimate; later figures published by Media Capital." width="720">
 </picture>
 </div>
 
-TVI Player grew from hundreds of thousands of monthly users (Dec 2022, the earliest public figure) to **2M+ monthly unique users** (May 2025) while I worked on it. These figures describe the product, as published by Media Capital, not my individual contribution. Sources: <a href="https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/" target="_blank" rel="noopener noreferrer">Media Capital, Fire TV launch</a>, <a href="https://mediacapital.pt/wp-content/uploads/2025/05/deae7d5f9aed81ae1323fef2d4276ac8.pdf" target="_blank" rel="noopener noreferrer">2024 report</a>, <a href="https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades" target="_blank" rel="noopener noreferrer">MC News</a>, <a href="https://eco.sapo.pt/2026/03/29/tvi-acelera-sic-ainda-a-procura-de-futuro/" target="_blank" rel="noopener noreferrer">ECO</a>.
+When I joined Media Capital in **Nov 2021**, TVI Player had roughly hundreds of thousands of monthly users, based on my firsthand estimate (around 200K, not an audited figure). It reached **2M+ monthly unique users** by May 2025, according to published figures. These describe the product's reach, not my individual contribution. Sources: <a href="https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/" target="_blank" rel="noopener noreferrer">Media Capital, Fire TV launch</a>, <a href="https://mediacapital.pt/wp-content/uploads/2025/05/deae7d5f9aed81ae1323fef2d4276ac8.pdf" target="_blank" rel="noopener noreferrer">2024 report</a>, <a href="https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades" target="_blank" rel="noopener noreferrer">MC News</a>, <a href="https://eco.sapo.pt/2026/03/29/tvi-acelera-sic-ainda-a-procura-de-futuro/" target="_blank" rel="noopener noreferrer">ECO</a>.
 
 ## Professional work
 
