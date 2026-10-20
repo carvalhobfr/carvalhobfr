@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img" aria-labelledby="t d">
-<title id="t">Matheus Carvalho, Software Engineer · Web, Streaming &amp; Connected TV</title>
+<title id="t">Matheus Carvalho, Software Engineer</title>
 <desc id="d">Software Engineer building web, streaming and Connected TV applications with React, TypeScript and Node.js. Illustration of a browser window and a TV screen with a focused tile, connected to an API.</desc>
 <style>.sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif}.mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}</style>
 <defs>
@@ -11,7 +11,7 @@
 
 <rect x="1.5" y="1.5" width="717" height="277" rx="15" fill="url(#dots)" mask="url(#m)"/>
 <text x="40" y="104" class="sans" font-size="42" font-weight="700" fill="#fafafa" textLength="372" lengthAdjust="spacingAndGlyphs">Matheus Carvalho</text>
-<text x="40" y="142" class="sans" font-size="20" font-weight="400" fill="#a1a1aa" textLength="374" lengthAdjust="spacingAndGlyphs">Software Engineer · Web, Streaming &amp; Connected TV</text>
+<text x="40" y="142" class="sans" font-size="24" font-weight="400" fill="#a1a1aa" textLength="234" lengthAdjust="spacingAndGlyphs">Software Engineer</text>
 <text x="40" y="172" class="sans" font-size="18" font-weight="400" fill="#9a9aa4" textLength="280" lengthAdjust="spacingAndGlyphs">Web products &amp; media platforms</text>
 <rect x="40" y="204" width="79" height="34" rx="17" fill="none" stroke="#9a9aa4" stroke-width="1.2"/><text x="79.5" y="227" class="mono" font-size="17" font-weight="400" fill="#a1a1aa" text-anchor="middle">React</text><rect x="129" y="204" width="130" height="34" rx="17" fill="none" stroke="#9a9aa4" stroke-width="1.2"/><text x="194" y="227" class="mono" font-size="17" font-weight="400" fill="#a1a1aa" text-anchor="middle">TypeScript</text><rect x="269" y="204" width="99" height="34" rx="17" fill="none" stroke="#9a9aa4" stroke-width="1.2"/><text x="318.5" y="227" class="mono" font-size="17" font-weight="400" fill="#a1a1aa" text-anchor="middle">Node.js</text>
 
