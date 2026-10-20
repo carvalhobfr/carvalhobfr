@@ -9,7 +9,7 @@
 
 </div>
 
-Software Engineer: React and TypeScript on the front, Node.js on the back. Since Nov 2021 at Media Capital, working on **TVI Player**, a streaming platform on the web and on Smart TVs (LG webOS, Samsung Tizen, Android TV). Brazilian, based in Madrid.
+I build web and streaming applications with React, TypeScript and Node.js. Since Nov 2021, I've worked on **TVI Player** at Media Capital, across web and Smart TV platforms (LG webOS, Samsung Tizen and Android TV). Brazilian, based in Madrid.
 
 **Stack:** React · Next.js · TypeScript · Node.js (Fastify, NestJS) · PostgreSQL · MongoDB · Docker
 
