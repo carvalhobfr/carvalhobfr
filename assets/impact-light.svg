@@ -1,31 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 424" width="720" height="424" role="img" aria-labelledby="t d">
-<title id="t">Engineering impact: 2M+ monthly unique users on TVI Player</title>
-<desc id="d">TVI Player (Media Capital) reached 2M+ monthly unique users in May 2025. Dec 2022: Hundreds of thousands monthly users. 2024: ~1M monthly unique users. May 2025: 2M+ monthly unique users. Context, Media Capital Digital ecosystem: 4M+ monthly unique users, 2.5B pageviews in 2025. Product and ecosystem metrics published by Media Capital. Not individual results.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" role="img" aria-labelledby="t d">
+<title id="t">TVI Player since joining Media Capital in Nov 2021: Hundreds of thousands monthly users to 2M+ monthly unique users</title>
+<desc id="d">Joined Media Capital in Nov 2021. TVI Player: Dec 2022, Hundreds of thousands monthly users. 2024, ~1M monthly unique users. May 2025, 2M+ monthly unique users. Context, Media Capital Digital ecosystem: 4M+ monthly unique users, 2.5B pageviews in 2025. Product and ecosystem metrics published by Media Capital. They describe the product and the group, not individual results. The earliest public TVI Player figure is from Dec 2022.</desc>
 <style>.sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif}.mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}</style>
 <defs></defs>
-<rect x="0.75" y="0.75" width="718.5" height="422.5" rx="16" fill="#ffffff" stroke="#d4d4d8" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="718.5" height="370.5" rx="16" fill="#ffffff" stroke="#d4d4d8" stroke-width="1.5"/>
 
-<text x="40" y="46" class="mono" font-size="16" font-weight="400" fill="#71717a" letter-spacing="1.5">ENGINEERING IMPACT</text>
-<text x="680" y="46" class="mono" font-size="16" font-weight="400" fill="#71717a" text-anchor="end" letter-spacing="1">TVI PLAYER · MEDIA CAPITAL</text>
-<text x="34" y="172" class="sans" font-size="120" font-weight="700" fill="#09090b" textLength="236" lengthAdjust="spacingAndGlyphs">2M+</text>
-<text x="300" y="120" class="sans" font-size="28" font-weight="600" fill="#09090b" textLength="260" lengthAdjust="spacingAndGlyphs">monthly unique users</text>
-<text x="300" y="150" class="sans" font-size="20" font-weight="400" fill="#52525b">TVI Player · May 2025</text>
-<text x="300" y="178" class="sans" font-size="18" font-weight="400" fill="#52525b" textLength="372" lengthAdjust="spacingAndGlyphs">A product metric, not an individual result.</text>
-<line x1="48" y1="232" x2="672" y2="232" stroke="#71717a" stroke-width="1.5"/>
-<circle cx="48" cy="232" r="6" fill="#ffffff" stroke="#52525b" stroke-width="2"/>
-<text x="40" y="264" class="mono" font-size="17" font-weight="400" fill="#71717a" text-anchor="start">Dec 2022</text>
-<text x="40" y="290" class="sans" font-size="20" font-weight="700" fill="#09090b" text-anchor="start">Hundreds of thousands</text>
-<text x="40" y="314" class="sans" font-size="17" font-weight="400" fill="#52525b" text-anchor="start">monthly users</text>
-<circle cx="360" cy="232" r="6" fill="#ffffff" stroke="#52525b" stroke-width="2"/>
-<text x="360" y="264" class="mono" font-size="17" font-weight="400" fill="#71717a" text-anchor="middle">2024</text>
-<text x="360" y="290" class="sans" font-size="20" font-weight="700" fill="#09090b" text-anchor="middle">~1M</text>
-<text x="360" y="314" class="sans" font-size="17" font-weight="400" fill="#52525b" text-anchor="middle">monthly unique users</text>
-<circle cx="672" cy="232" r="8" fill="#09090b" stroke="#09090b" stroke-width="2"/>
-<text x="680" y="264" class="mono" font-size="17" font-weight="400" fill="#71717a" text-anchor="end">May 2025</text>
-<text x="680" y="290" class="sans" font-size="20" font-weight="700" fill="#09090b" text-anchor="end">2M+</text>
-<text x="680" y="314" class="sans" font-size="17" font-weight="400" fill="#52525b" text-anchor="end">monthly unique users</text>
-<line x1="40" y1="338" x2="680" y2="338" stroke="#d4d4d8"/>
-<text x="40" y="364" class="mono" font-size="16" font-weight="400" fill="#71717a" letter-spacing="1">MEDIA CAPITAL DIGITAL ECOSYSTEM · CONTEXT</text>
-<text x="40" y="392" class="sans" fill="#09090b"><tspan font-size="24" font-weight="700">4M+</tspan><tspan dx="10" font-size="18" font-weight="400" fill="#52525b">monthly unique users</tspan></text>
-<text x="360" y="392" class="sans" fill="#09090b"><tspan font-size="24" font-weight="700">2.5B</tspan><tspan dx="10" font-size="18" font-weight="400" fill="#52525b">pageviews in 2025</tspan></text>
+<text x="40" y="46" class="mono" font-size="16" font-weight="400" fill="#71717a" letter-spacing="1.2">SINCE I JOINED MEDIA CAPITAL · NOV 2021</text>
+<text x="680" y="46" class="mono" font-size="16" font-weight="400" fill="#71717a" text-anchor="end" letter-spacing="1.2">TVI PLAYER</text>
+<text x="40" y="104" class="mono" font-size="17" font-weight="400" fill="#71717a">Dec 2022</text>
+<text x="40" y="148" class="sans" font-size="30" font-weight="700" fill="#09090b">Hundreds of</text>
+<text x="40" y="182" class="sans" font-size="30" font-weight="700" fill="#09090b">thousands</text>
+<text x="40" y="218" class="sans" font-size="18" font-weight="400" fill="#52525b">monthly users</text>
+
+<line x1="246" y1="150" x2="448" y2="150" stroke="#52525b" stroke-width="1.5"/>
+<polygon points="458,150 446,143 446,157" fill="#52525b"/>
+<circle cx="351" cy="150" r="6" fill="#ffffff" stroke="#52525b" stroke-width="2"/>
+<text x="351" y="126" class="mono" font-size="16" font-weight="400" fill="#71717a" text-anchor="middle">2024</text>
+<text x="351" y="184" class="sans" font-size="22" font-weight="700" fill="#09090b" text-anchor="middle">~1M</text>
+<text x="351" y="206" class="sans" font-size="16" font-weight="400" fill="#52525b" text-anchor="middle">monthly unique users</text>
+<text x="680" y="104" class="mono" font-size="17" font-weight="400" fill="#71717a" text-anchor="end">May 2025</text>
+<text x="680" y="196" class="sans" font-size="96" font-weight="700" fill="#09090b" text-anchor="end">2M+</text>
+<text x="680" y="228" class="sans" font-size="20" font-weight="400" fill="#52525b" text-anchor="end">monthly unique users</text>
+<line x1="40" y1="256" x2="680" y2="256" stroke="#d4d4d8"/>
+<text x="40" y="284" class="mono" font-size="16" font-weight="400" fill="#71717a" letter-spacing="1">MEDIA CAPITAL DIGITAL ECOSYSTEM · CONTEXT</text>
+<text x="40" y="316" class="sans" fill="#09090b"><tspan font-size="24" font-weight="700">4M+</tspan><tspan dx="10" font-size="18" font-weight="400" fill="#52525b">monthly unique users</tspan></text>
+<text x="360" y="316" class="sans" fill="#09090b"><tspan font-size="24" font-weight="700">2.5B</tspan><tspan dx="10" font-size="18" font-weight="400" fill="#52525b">pageviews in 2025</tspan></text>
+<text x="40" y="348" class="sans" font-size="16" font-weight="400" fill="#71717a">Product and ecosystem figures published by Media Capital.</text>
 </svg>
