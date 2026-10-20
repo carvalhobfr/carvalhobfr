@@ -21,12 +21,12 @@
   },
   "milestones": [
     {
-      "when": "Dec 2022",
+      "when": "Nov 2021",
       "value": "Hundreds of thousands",
-      "unit": "monthly users",
+      "unit": "monthly users (estimate)",
       "source": {
-        "name": "Media Capital, Amazon Fire TV launch",
-        "url": "https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/"
+        "name": "Personal estimate from work on TVI Player",
+        "kind": "personal_estimate"
       }
     },
     {
@@ -71,6 +71,6 @@
       }
     ]
   },
-  "footnote": "Product and ecosystem figures published by Media Capital.",
-  "disclaimer": "Product and ecosystem metrics published by Media Capital. They describe the product and the group, not individual results. The earliest public TVI Player figure is from Dec 2022."
+  "footnote": "2021 estimate from firsthand experience; later figures published.",
+  "disclaimer": "The Nov 2021 figure is an approximate personal estimate, not audited or publicly reported. Later figures are published product and ecosystem metrics, not individual contributions."
 }
