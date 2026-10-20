@@ -161,7 +161,7 @@ ${text(452, 212, '>_ api', { size: 18, cls: 'mono', fill: th.fg })}`;
   const body = `
 <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="15" fill="url(#dots)" mask="url(#m)"/>
 ${text(40, 104, 'Matheus Carvalho', { size: 42, weight: 700, fill: th.fg, length: 372 })}
-${text(40, 142, 'Full-stack Developer', { size: 24, fill: th.muted, length: 234 })}
+${text(40, 142, 'Software Engineer · Web, Streaming & Connected TV', { size: 20, fill: th.muted, length: 374 })}
 ${text(40, 172, 'Web products & media platforms', { size: 18, fill: th.faint, length: 280 })}
 ${chipsSvg}
 ${art}`;
@@ -172,8 +172,8 @@ ${art}`;
     th,
     defs,
     body,
-    title: 'Matheus Carvalho, Full-stack Developer',
-    desc: 'Full-stack developer building web products and media platforms with React, TypeScript and Node.js. Illustration of a browser window and a TV screen with a focused tile, connected to an API.',
+    title: 'Matheus Carvalho, Software Engineer · Web, Streaming & Connected TV',
+    desc: 'Software Engineer building web, streaming and Connected TV applications with React, TypeScript and Node.js. Illustration of a browser window and a TV screen with a focused tile, connected to an API.',
   });
 }
 
