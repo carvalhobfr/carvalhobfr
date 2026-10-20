@@ -13,9 +13,20 @@ import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
+// Backgrounds are transparent so the widgets take the tone of whichever GitHub theme is active
+// (light, dark, dark dimmed, high contrast). `pages` lists the worst-case backgrounds the text
+// has to stay readable on; line, tile and card are translucent overlays.
 export const THEMES = {
-  light: { bg: '#ffffff', fg: '#09090b', muted: '#52525b', faint: '#71717a', line: '#d4d4d8', tile: '#f4f4f5' },
-  dark: { bg: '#0a0a0a', fg: '#fafafa', muted: '#a1a1aa', faint: '#8b8b95', line: '#3f3f46', tile: '#18181b' },
+  light: {
+    fg: '#09090b', muted: '#52525b', faint: '#6b6b74', onFg: '#ffffff',
+    line: '#00000026', tile: '#0000000a', card: '#0000000a',
+    pages: ['#ffffff', '#f6f8fa', '#f0f0f0'],
+  },
+  dark: {
+    fg: '#fafafa', muted: '#a1a1aa', faint: '#9a9aa4', onFg: '#0d1117',
+    line: '#ffffff2e', tile: '#ffffff0f', card: '#ffffff08',
+    pages: ['#0d1117', '#22272e', '#0a0c10', '#2b3138'],
+  },
 };
 
 const SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
@@ -48,16 +59,19 @@ export function contrast(a, b) {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-// WCAG AA for the colors that carry text or information. Decoration (line, tile) is exempt.
+// WCAG AA for the colors that carry text or information, on every background the widget can
+// land on. Decoration (line, tile, card) is exempt.
 export function assertContrast(themes = THEMES) {
   const failures = [];
   for (const [name, th] of Object.entries(themes)) {
-    for (const key of ['fg', 'muted', 'faint']) {
-      const ratio = contrast(th[key], th.bg);
-      if (ratio < 4.5) failures.push(`${name}.${key} on bg is ${ratio.toFixed(2)}:1 (needs 4.5:1)`);
+    for (const page of th.pages) {
+      for (const key of ['fg', 'muted', 'faint']) {
+        const ratio = contrast(th[key], page);
+        if (ratio < 4.5) failures.push(`${name}.${key} on ${page} is ${ratio.toFixed(2)}:1 (needs 4.5:1)`);
+      }
     }
-    const onFocus = contrast(th.bg, th.fg);
-    if (onFocus < 4.5) failures.push(`${name}.bg on fg is ${onFocus.toFixed(2)}:1 (needs 4.5:1)`);
+    const onFocus = contrast(th.onFg, th.fg);
+    if (onFocus < 4.5) failures.push(`${name}.onFg on fg is ${onFocus.toFixed(2)}:1 (needs 4.5:1)`);
   }
   if (failures.length) throw new Error(`contrast check failed:\n  ${failures.join('\n  ')}`);
 }
@@ -83,7 +97,7 @@ function frame({ width, height, title, desc, th, body, defs = '' }) {
 <desc id="d">${esc(desc)}</desc>
 <style>.sans{font-family:${SANS}}.mono{font-family:${MONO}}</style>
 <defs>${defs}</defs>
-<rect x="0.75" y="0.75" width="${width - 1.5}" height="${height - 1.5}" rx="16" fill="${th.bg}" stroke="${th.line}" stroke-width="1.5"/>
+<rect x="0.75" y="0.75" width="${width - 1.5}" height="${height - 1.5}" rx="16" fill="${th.card}" stroke="${th.line}" stroke-width="1.5"/>
 ${body}
 </svg>
 `;
@@ -114,21 +128,23 @@ export function renderHero(th) {
       if (col === 1 && row === 0) {
         tvTiles.push(`<rect x="${x - 4}" y="${y - 4}" width="45" height="44" rx="7" fill="none" stroke="${th.fg}" stroke-width="2"/>`);
         tvTiles.push(`<rect x="${x}" y="${y}" width="37" height="36" rx="4" fill="${th.fg}"/>`);
-        tvTiles.push(`<polygon points="${x + 13},${y + 10} ${x + 13},${y + 26} ${x + 26},${y + 18}" fill="${th.bg}"/>`);
+        tvTiles.push(`<polygon points="${x + 13},${y + 10} ${x + 13},${y + 26} ${x + 26},${y + 18}" fill="${th.onFg}"/>`);
       } else {
         tvTiles.push(`<rect x="${x}" y="${y}" width="37" height="36" rx="4" fill="${th.tile}" stroke="${th.line}"/>`);
       }
     }
   }
   const art = `
-<rect x="436" y="44" width="176" height="128" rx="10" fill="${th.bg}" stroke="${th.fg}" stroke-width="2.5"/>
+<g mask="url(#cut)">
+<rect x="436" y="44" width="176" height="128" rx="10" fill="none" stroke="${th.fg}" stroke-width="2.5"/>
 <line x1="436" y1="66" x2="612" y2="66" stroke="${th.line}" stroke-width="1.5"/>
 <circle cx="450" cy="55" r="3" fill="${th.faint}"/><circle cx="461" cy="55" r="3" fill="${th.faint}"/><circle cx="472" cy="55" r="3" fill="${th.faint}"/>
 <rect x="486" y="49" width="112" height="12" rx="6" fill="${th.tile}" stroke="${th.line}"/>
 <rect x="448" y="76" width="152" height="16" rx="3" fill="${th.tile}"/>
 <rect x="448" y="100" width="72" height="60" rx="4" fill="${th.tile}" stroke="${th.line}"/>
 <rect x="528" y="100" width="72" height="60" rx="4" fill="${th.tile}" stroke="${th.line}"/>
-<rect x="540" y="108" width="144" height="100" rx="10" fill="${th.bg}" stroke="${th.fg}" stroke-width="2.5"/>
+</g>
+<rect x="540" y="108" width="144" height="100" rx="10" fill="none" stroke="${th.fg}" stroke-width="2.5"/>
 ${tvTiles.join('\n')}
 <rect x="600" y="208" width="24" height="8" fill="${th.fg}"/>
 <line x1="580" y1="218" x2="644" y2="218" stroke="${th.fg}" stroke-width="2.5" stroke-linecap="round"/>
@@ -139,7 +155,8 @@ ${text(452, 212, '>_ api', { size: 18, cls: 'mono', fill: th.fg })}`;
   const defs = `
 <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="${th.line}"/></pattern>
 <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0.35" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
-<mask id="m"><rect width="${W}" height="${H}" fill="url(#fade)"/></mask>`;
+<mask id="m"><rect width="${W}" height="${H}" fill="url(#fade)"/><rect x="430" y="38" width="188" height="140" fill="#000"/><rect x="534" y="102" width="156" height="120" fill="#000"/><rect x="430" y="178" width="100" height="56" fill="#000"/></mask>
+<mask id="cut"><rect width="${W}" height="${H}" fill="#fff"/><rect x="535" y="103" width="154" height="110" rx="13" fill="#000"/></mask>`;
 
   const body = `
 <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="15" fill="url(#dots)" mask="url(#m)"/>
@@ -222,9 +239,10 @@ export function renderImpact(th, data) {
   ].join('\n');
 
   const arrow = `
-<line x1="246" y1="150" x2="448" y2="150" stroke="${th.muted}" stroke-width="1.5"/>
+<line x1="246" y1="150" x2="343" y2="150" stroke="${th.muted}" stroke-width="1.5"/>
+<line x1="359" y1="150" x2="448" y2="150" stroke="${th.muted}" stroke-width="1.5"/>
 <polygon points="458,150 446,143 446,157" fill="${th.muted}"/>
-<circle cx="351" cy="150" r="6" fill="${th.bg}" stroke="${th.muted}" stroke-width="2"/>
+<circle cx="351" cy="150" r="6" fill="none" stroke="${th.muted}" stroke-width="2"/>
 ${text(351, 126, mid.when, { size: 16, cls: 'mono', fill: th.faint, anchor: 'middle' })}
 ${text(351, 184, mid.value, { size: 22, weight: 700, fill: th.fg, anchor: 'middle' })}
 ${text(351, 206, mid.unit, { size: 16, fill: th.muted, anchor: 'middle' })}`;

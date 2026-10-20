@@ -37,8 +37,8 @@ jobs:
         with:
           github_user_name: carvalhobfr
           outputs: |
-            assets/snake-light.svg?color_background=transparent&color_snake=%2309090b&color_dots=%23f4f4f5,%23d4d4d8,%23a1a1aa,%2371717a,%233f3f46
-            assets/snake-dark.svg?color_background=transparent&color_snake=%23fafafa&color_dots=%2318181b,%233f3f46,%2352525b,%23a1a1aa,%23e4e4e7
+            assets/snake-light.svg?color_background=transparent&color_snake=%2309090b&color_dots=%2300000012,%2300000033,%2300000066,%2300000099,%23000000cc
+            assets/snake-dark.svg?color_background=transparent&color_snake=%23fafafa&color_dots=%23ffffff12,%23ffffff33,%23ffffff66,%23ffffff99,%23ffffffcc
       # The snake loops for ~48 s; stop it for people who ask for reduced motion.
       - name: Respect reduced motion
         run: |
