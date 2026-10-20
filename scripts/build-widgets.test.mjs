@@ -52,5 +52,5 @@ test('every widget renders in both themes with title, desc and no placeholder te
   assert.match(files['impact-light.svg'], /2M\+/);
   assert.match(files['impact-light.svg'], /SINCE I JOINED MEDIA CAPITAL · NOV 2021/);
   assert.match(files['impact-light.svg'], /published by Media Capital/);
-  assert.match(files['impact-light.svg'], /Hundreds of/);
+  assert.match(files['impact-light.svg'], /~1M/);
 });
