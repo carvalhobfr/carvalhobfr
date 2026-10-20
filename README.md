@@ -1,15 +1,15 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=3ada6ee9">
-  <img src="assets/hero-light.svg?v=4fbe8ba5" alt="Matheus Carvalho, Full-stack Developer building web products and media platforms with React, TypeScript and Node.js" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=softwareengineer1">
+  <img src="assets/hero-light.svg?v=softwareengineer1" alt="Matheus Carvalho, Software Engineer building Web, Streaming &amp; Connected TV applications with React, TypeScript and Node.js" width="720">
 </picture>
 
 <a href="https://matheuscarvalho.me" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://www.linkedin.com/in/matheusrcarvalho/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://matheuscarvalho.me/en/projects" target="_blank" rel="noopener noreferrer">Case studies</a>
 
 </div>
 
-Full-stack developer: React and TypeScript on the front, Node.js on the back. Since Nov 2021 at Media Capital, working on **TVI Player**, a streaming platform on the web and on Smart TVs (LG webOS, Samsung Tizen, Android TV). Brazilian, based in Madrid.
+Software Engineer focused on Web, Streaming & Connected TV: React and TypeScript on the front, Node.js on the back. Since Nov 2021 at Media Capital, working on **TVI Player**, a streaming platform on the web and on Smart TVs (LG webOS, Samsung Tizen, Android TV). Brazilian, based in Madrid.
 
 **Stack:** React · Next.js · TypeScript · Node.js (Fastify, NestJS) · PostgreSQL · MongoDB · Docker
 
