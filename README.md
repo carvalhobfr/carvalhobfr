@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=24277d74">
-  <img src="assets/hero-light.svg?v=71c60f92" alt="Matheus Carvalho, Full-stack Developer building web products and media platforms with React, TypeScript and Node.js" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=3ada6ee9">
+  <img src="assets/hero-light.svg?v=4fbe8ba5" alt="Matheus Carvalho, Full-stack Developer building web products and media platforms with React, TypeScript and Node.js" width="720">
 </picture>
 
 <a href="https://matheuscarvalho.me" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://www.linkedin.com/in/matheusrcarvalho/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://matheuscarvalho.me/en/projects" target="_blank" rel="noopener noreferrer">Case studies</a>
@@ -17,8 +17,8 @@ Full-stack developer: React and TypeScript on the front, Node.js on the back. Si
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=c7fe873d">
-  <img src="assets/impact-light.svg?v=d3f70ef5" alt="Since I joined Media Capital in Nov 2021: TVI Player went from hundreds of thousands of monthly users in Dec 2022, to about 1M monthly unique users in 2024, to 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. Figures published by Media Capital." width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=8a40c371">
+  <img src="assets/impact-light.svg?v=940d03c9" alt="Since I joined Media Capital in Nov 2021: TVI Player went from hundreds of thousands of monthly users in Dec 2022, to about 1M monthly unique users in 2024, to 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. Figures published by Media Capital." width="720">
 </picture>
 </div>
 
@@ -89,8 +89,8 @@ TVI Player grew from hundreds of thousands of monthly users (Dec 2022, the earli
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=8ec0605e">
-  <img src="assets/snake-light.svg?v=ef19ddb3" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=ef43c40d">
+  <img src="assets/snake-light.svg?v=733f1590" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
 </picture>
 
 <a href="https://hub.xerj.org/contributors/carvalhobfr" target="_blank" rel="noopener noreferrer"><img src="https://hub.xerj.org/contributors/carvalhobfr/badge.svg" alt="XERJ Corpus Hub contributor"></a>
