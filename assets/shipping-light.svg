@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 204" width="720" height="204" role="img" aria-labelledby="t d">
+<title id="t">Now shipping</title>
+<desc id="d">Latest releases. Orbit v0.3.0 on Oct 13, 2026. Conclave v0.20.0 on Oct 13, 2026.</desc>
+<style>.sans{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif}.mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}</style>
+<defs></defs>
+<rect x="0.75" y="0.75" width="718.5" height="202.5" rx="16" fill="#ffffff" stroke="#d4d4d8" stroke-width="1.5"/>
+
+<text x="40" y="40" class="mono" font-size="16" font-weight="400" fill="#71717a" letter-spacing="1.5">NOW SHIPPING</text>
+<text x="680" y="40" class="mono" font-size="16" font-weight="400" fill="#71717a" text-anchor="end">updated daily</text>
+<circle cx="48" cy="77" r="4.5" fill="#09090b"/>
+<text x="64" y="84" class="sans" font-size="24" font-weight="700" fill="#09090b">Orbit</text>
+<rect x="214" y="62" width="83" height="30" rx="8" fill="none" stroke="#71717a" stroke-width="1.2"/>
+<text x="255.5" y="82" class="mono" font-size="17" font-weight="400" fill="#09090b" text-anchor="middle">v0.3.0</text>
+<text x="680" y="82" class="sans" font-size="20" font-weight="400" fill="#52525b" text-anchor="end">Oct 13, 2026</text>
+<text x="64" y="110" class="sans" font-size="18" font-weight="400" fill="#52525b">Native macOS command center · Swift</text>
+<circle cx="48" cy="141" r="4.5" fill="#09090b"/>
+<text x="64" y="148" class="sans" font-size="24" font-weight="700" fill="#09090b">Conclave</text>
+<rect x="214" y="126" width="93" height="30" rx="8" fill="none" stroke="#71717a" stroke-width="1.2"/>
+<text x="260.5" y="146" class="mono" font-size="17" font-weight="400" fill="#09090b" text-anchor="middle">v0.20.0</text>
+<text x="680" y="146" class="sans" font-size="20" font-weight="400" fill="#52525b" text-anchor="end">Oct 13, 2026</text>
+<text x="64" y="174" class="sans" font-size="18" font-weight="400" fill="#52525b">Evidence-first PR review CLI · npm · MIT</text>
+</svg>

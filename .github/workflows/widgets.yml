@@ -1,0 +1,46 @@
+name: widgets
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/impact.json'
+      - 'scripts/**'
+      - '.github/workflows/widgets.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: widgets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test
+        run: node --test "scripts/*.test.mjs"
+      - name: Build widgets
+        run: node scripts/build-widgets.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- assets data/shipping.json; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets data/shipping.json
+          git commit -m "chore: refresh widgets"
+          git push

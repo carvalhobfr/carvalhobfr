@@ -1,0 +1,69 @@
+{
+  "product": {
+    "name": "TVI Player",
+    "company": "Media Capital",
+    "role": "CTV / Smart TV engineering"
+  },
+  "headline": {
+    "value": "2M+",
+    "label": "monthly unique users",
+    "period": "May 2025",
+    "sources": [
+      {
+        "name": "MC News",
+        "url": "https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades"
+      },
+      {
+        "name": "TVI",
+        "url": "https://tvi.iol.pt/tvi-player/novidade/10-anos-depois-o-tvi-player-mudou-mais-moderno-mais-inteligente-feito-para-si"
+      }
+    ]
+  },
+  "milestones": [
+    {
+      "when": "Dec 2022",
+      "value": "Hundreds of thousands",
+      "unit": "monthly users",
+      "source": {
+        "name": "Media Capital, Amazon Fire TV launch",
+        "url": "https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/"
+      }
+    },
+    {
+      "when": "2024",
+      "value": "~1M",
+      "unit": "monthly unique users",
+      "source": {
+        "name": "Media Capital, 2024 report",
+        "url": "https://mediacapital.pt/wp-content/uploads/2025/05/deae7d5f9aed81ae1323fef2d4276ac8.pdf"
+      }
+    },
+    {
+      "when": "May 2025",
+      "value": "2M+",
+      "unit": "monthly unique users",
+      "source": {
+        "name": "MC News",
+        "url": "https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades"
+      }
+    }
+  ],
+  "ecosystem": {
+    "name": "Media Capital Digital",
+    "items": [
+      { "value": "4M+", "label": "monthly unique users" },
+      { "value": "2.5B", "label": "pageviews in 2025" }
+    ],
+    "sources": [
+      {
+        "name": "ECO, 2025 digital results",
+        "url": "https://eco.sapo.pt/2026/03/29/tvi-acelera-sic-ainda-a-procura-de-futuro/"
+      },
+      {
+        "name": "ECO, Media Capital 2025 results",
+        "url": "https://eco.sapo.pt/2026/03/27/lucro-da-media-capital-recua-60-para-37-milhoes-de-euros-em-2025/"
+      }
+    ]
+  },
+  "disclaimer": "Product and ecosystem metrics published by Media Capital. Not individual results."
+}

@@ -1,0 +1,12 @@
+{
+  "orbit": {
+    "version": "v0.3.0",
+    "date": "2026-10-13T20:53:15.000Z",
+    "url": "https://github.com/carvalhobfr/orbit-releases/releases/tag/v0.3.0"
+  },
+  "conclave": {
+    "version": "v0.20.0",
+    "date": "2026-10-13T11:45:16.375Z",
+    "url": "https://www.npmjs.com/package/conclave-ai/v/0.20.0"
+  }
+}
