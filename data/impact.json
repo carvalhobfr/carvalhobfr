@@ -1,9 +1,9 @@
 {
   "product": {
     "name": "TVI Player",
-    "company": "Media Capital",
-    "role": "CTV / Smart TV engineering"
+    "company": "Media Capital"
   },
+  "joined": "Nov 2021",
   "headline": {
     "value": "2M+",
     "label": "monthly unique users",
@@ -51,8 +51,14 @@
   "ecosystem": {
     "name": "Media Capital Digital",
     "items": [
-      { "value": "4M+", "label": "monthly unique users" },
-      { "value": "2.5B", "label": "pageviews in 2025" }
+      {
+        "value": "4M+",
+        "label": "monthly unique users"
+      },
+      {
+        "value": "2.5B",
+        "label": "pageviews in 2025"
+      }
     ],
     "sources": [
       {
@@ -65,5 +71,6 @@
       }
     ]
   },
-  "disclaimer": "Product and ecosystem metrics published by Media Capital. Not individual results."
+  "footnote": "Product and ecosystem figures published by Media Capital.",
+  "disclaimer": "Product and ecosystem metrics published by Media Capital. They describe the product and the group, not individual results. The earliest public TVI Player figure is from Dec 2022."
 }

@@ -2,7 +2,7 @@ name: widgets
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '17 6 * * 1'
   workflow_dispatch:
   push:
     branches: [main]
@@ -29,18 +29,24 @@ jobs:
           node-version: 22
       - name: Test
         run: node --test "scripts/*.test.mjs"
-      - name: Build widgets
+      - name: Build hero and impact
         run: node scripts/build-widgets.mjs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Third-party action, pinned to the commit of v3.5.0.
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: carvalhobfr
+          outputs: |
+            assets/snake-light.svg?color_background=transparent&color_snake=%2309090b&color_dots=%23f4f4f5,%23d4d4d8,%23a1a1aa,%2371717a,%233f3f46
+            assets/snake-dark.svg?color_background=transparent&color_snake=%23fafafa&color_dots=%2318181b,%233f3f46,%2352525b,%23a1a1aa,%23e4e4e7
       - name: Commit changes
         run: |
-          if git diff --quiet -- assets data/shipping.json; then
+          if git diff --quiet -- assets && [ -z "$(git ls-files --others --exclude-standard assets)" ]; then
             echo "nothing to commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets data/shipping.json
+          git add assets
           git commit -m "chore: refresh widgets"
           git push

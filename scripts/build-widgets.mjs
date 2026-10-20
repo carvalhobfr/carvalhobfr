@@ -1,15 +1,11 @@
 #!/usr/bin/env node
-// Builds assets/*.svg (hero, impact, shipping; light and dark) for the profile README.
+// Builds assets/hero-*.svg and assets/impact-*.svg (light and dark) for the profile README.
 //
-//   data/impact.json     hand-curated metrics, each with scope and source (never fetched)
-//   data/shipping.json   last good release data (cache, committed)
-//   assets/*.svg         output
+//   data/impact.json   hand-curated metrics, each with scope and source (never fetched)
+//   assets/*.svg       output
 //
-// Zero dependencies, Node 20+. If an API fails the cached value is used and a warning is
-// printed; if there is no cache either, nothing is written and the exit code is 1.
-//
-//   node scripts/build-widgets.mjs             fetch, then build
-//   node scripts/build-widgets.mjs --offline   build from the cache only
+// Zero dependencies, Node 20+, no network. Release badges, downloads and the contribution
+// snake are produced elsewhere (shields.io and the snk action in the workflow).
 
 import { readFile, writeFile, rename, mkdir } from 'node:fs/promises';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -35,18 +31,6 @@ export function esc(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
-}
-
-export function formatDate(iso) {
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) throw new Error(`invalid date: ${iso}`);
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(d);
-}
-
-export function normalizeVersion(raw) {
-  const m = /^v?(\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?)$/.exec(String(raw ?? '').trim());
-  if (!m) throw new Error(`invalid version: ${raw}`);
-  return `v${m[1]}`;
 }
 
 function channel(hex) {
@@ -110,7 +94,7 @@ ${body}
 export function renderHero(th) {
   const W = 720;
   const H = 280;
-  const chips = ['webOS', 'Tizen', 'Android TV'];
+  const chips = ['React', 'TypeScript', 'Node.js'];
   let cx = 40;
   let chipsSvg = '';
   for (const label of chips) {
@@ -120,36 +104,37 @@ export function renderHero(th) {
     cx += w + 10;
   }
 
-  // A TV screen with the spatial-navigation focus ring, the thing CTV work is made of.
-  const tiles = [];
+  // A browser window in front of a TV with a focus ring, and the API behind them: one
+  // developer from the web to the living room.
+  const tvTiles = [];
   for (let row = 0; row < 2; row++) {
     for (let col = 0; col < 3; col++) {
-      const x = 462 + col * 69;
-      const y = 66 + row * 62;
-      const focused = col === 1 && row === 0;
-      if (focused) {
-        tiles.push(`<rect x="${x - 5}" y="${y - 5}" width="68" height="60" rx="9" fill="none" stroke="${th.fg}" stroke-width="2"/>`);
-        tiles.push(`<rect x="${x}" y="${y}" width="58" height="50" rx="5" fill="${th.fg}"/>`);
-        tiles.push(`<polygon points="${x + 22},${y + 14} ${x + 22},${y + 36} ${x + 42},${y + 25}" fill="${th.bg}"/>`);
+      const x = 548 + col * 45;
+      const y = 116 + row * 44;
+      if (col === 1 && row === 0) {
+        tvTiles.push(`<rect x="${x - 4}" y="${y - 4}" width="45" height="44" rx="7" fill="none" stroke="${th.fg}" stroke-width="2"/>`);
+        tvTiles.push(`<rect x="${x}" y="${y}" width="37" height="36" rx="4" fill="${th.fg}"/>`);
+        tvTiles.push(`<polygon points="${x + 13},${y + 10} ${x + 13},${y + 26} ${x + 26},${y + 18}" fill="${th.bg}"/>`);
       } else {
-        tiles.push(`<rect x="${x}" y="${y}" width="58" height="50" rx="5" fill="${th.tile}" stroke="${th.line}"/>`);
+        tvTiles.push(`<rect x="${x}" y="${y}" width="37" height="36" rx="4" fill="${th.tile}" stroke="${th.line}"/>`);
       }
     }
   }
-  const tv = `
-<rect x="440" y="44" width="240" height="156" rx="14" fill="none" stroke="${th.fg}" stroke-width="2.5"/>
-${tiles.join('\n')}
-<rect x="548" y="200" width="24" height="10" fill="${th.fg}"/>
-<line x1="520" y1="212" x2="600" y2="212" stroke="${th.fg}" stroke-width="2.5" stroke-linecap="round"/>`;
-
-  const dpad = `
-<circle cx="650" cy="248" r="20" fill="none" stroke="${th.muted}" stroke-width="1.5"/>
-<circle cx="650" cy="248" r="5" fill="${th.fg}"/>
-<polygon points="650,232 646,238 654,238" fill="${th.muted}"/>
-<polygon points="650,264 646,258 654,258" fill="${th.muted}"/>
-<polygon points="634,248 640,244 640,252" fill="${th.muted}"/>
-<polygon points="666,248 660,244 660,252" fill="${th.muted}"/>
-${text(616, 253, 'focus · select', { size: 16, cls: 'mono', fill: th.faint, anchor: 'end' })}`;
+  const art = `
+<rect x="436" y="44" width="176" height="128" rx="10" fill="${th.bg}" stroke="${th.fg}" stroke-width="2.5"/>
+<line x1="436" y1="66" x2="612" y2="66" stroke="${th.line}" stroke-width="1.5"/>
+<circle cx="450" cy="55" r="3" fill="${th.faint}"/><circle cx="461" cy="55" r="3" fill="${th.faint}"/><circle cx="472" cy="55" r="3" fill="${th.faint}"/>
+<rect x="486" y="49" width="112" height="12" rx="6" fill="${th.tile}" stroke="${th.line}"/>
+<rect x="448" y="76" width="152" height="16" rx="3" fill="${th.tile}"/>
+<rect x="448" y="100" width="72" height="60" rx="4" fill="${th.tile}" stroke="${th.line}"/>
+<rect x="528" y="100" width="72" height="60" rx="4" fill="${th.tile}" stroke="${th.line}"/>
+<rect x="540" y="108" width="144" height="100" rx="10" fill="${th.bg}" stroke="${th.fg}" stroke-width="2.5"/>
+${tvTiles.join('\n')}
+<rect x="600" y="208" width="24" height="8" fill="${th.fg}"/>
+<line x1="580" y1="218" x2="644" y2="218" stroke="${th.fg}" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="480" y1="172" x2="480" y2="184" stroke="${th.faint}" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="436" y="184" width="88" height="44" rx="8" fill="${th.tile}" stroke="${th.line}"/>
+${text(452, 212, '>_ api', { size: 18, cls: 'mono', fill: th.fg })}`;
 
   const defs = `
 <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="${th.line}"/></pattern>
@@ -159,11 +144,10 @@ ${text(616, 253, 'focus · select', { size: 16, cls: 'mono', fill: th.faint, anc
   const body = `
 <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="15" fill="url(#dots)" mask="url(#m)"/>
 ${text(40, 104, 'Matheus Carvalho', { size: 42, weight: 700, fill: th.fg, length: 372 })}
-${text(40, 142, 'Software Engineer', { size: 24, fill: th.muted, length: 214 })}
-${text(40, 172, 'Smart TV · streaming · web platforms', { size: 18, fill: th.faint, length: 336 })}
+${text(40, 142, 'Full-stack Developer', { size: 24, fill: th.muted, length: 234 })}
+${text(40, 172, 'Web products & media platforms', { size: 18, fill: th.faint, length: 280 })}
 ${chipsSvg}
-${tv}
-${dpad}`;
+${art}`;
 
   return frame({
     width: W,
@@ -171,8 +155,8 @@ ${dpad}`;
     th,
     defs,
     body,
-    title: 'Matheus Carvalho, Software Engineer',
-    desc: 'Software Engineer for Smart TV, streaming and web platforms. LG webOS, Samsung Tizen and Android TV. Illustration of a TV screen with a focused tile.',
+    title: 'Matheus Carvalho, Full-stack Developer',
+    desc: 'Full-stack developer building web products and media platforms with React, TypeScript and Node.js. Illustration of a browser window and a TV screen with a focused tile, connected to an API.',
   });
 }
 
@@ -183,11 +167,12 @@ export function validateImpact(data) {
     if (!cond) throw new Error(`data/impact.json: ${msg}`);
   };
   need(data && typeof data === 'object', 'must be an object');
-  need(data.product?.name && data.product?.company && data.product?.role, 'product.name/company/role required');
+  need(data.product?.name && data.product?.company, 'product.name/company required');
+  need(/^[A-Z][a-z]{2} \d{4}$/.test(data.joined ?? ''), 'joined must look like "Nov 2021"');
   const h = data.headline;
   need(h?.value && h?.label && h?.period, 'headline.value/label/period required');
   need(Array.isArray(h.sources) && h.sources.length > 0, 'headline.sources required (a metric without a source is not published)');
-  need(Array.isArray(data.milestones) && data.milestones.length === 3, 'exactly 3 milestones expected');
+  need(Array.isArray(data.milestones) && data.milestones.length === 3, 'exactly 3 milestones expected (before, middle, now)');
   for (const m of data.milestones) {
     need(m.when && m.value && m.unit, 'milestone needs when/value/unit');
     need(m.source?.name && /^https:\/\//.test(m.source?.url ?? ''), `milestone ${m.when} needs a source with an https url`);
@@ -196,173 +181,89 @@ export function validateImpact(data) {
   need(e?.name && Array.isArray(e.items) && e.items.length === 2, 'ecosystem.name and exactly 2 items required');
   need(Array.isArray(e.sources) && e.sources.length > 0, 'ecosystem.sources required');
   need(typeof data.disclaimer === 'string' && data.disclaimer.length > 0, 'disclaimer required');
+  need(typeof data.footnote === 'string' && data.footnote.length > 0 && data.footnote.length <= 64, 'footnote required (max 64 characters, it is drawn on one line)');
   return data;
+}
+
+// Greedy word wrap, at most two lines.
+export function wrap(value, max) {
+  const lines = [];
+  let line = '';
+  for (const word of String(value).split(' ')) {
+    if (line && `${line} ${word}`.length > max) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = line ? `${line} ${word}` : word;
+    }
+  }
+  lines.push(line);
+  if (lines.length > 2) throw new Error(`"${value}" needs more than two lines at ${max} characters`);
+  return lines;
 }
 
 export function renderImpact(th, data) {
   const W = 720;
-  const H = 424;
-  const { product, headline, milestones, ecosystem } = data;
+  const H = 372;
+  const { product, joined, milestones, ecosystem } = data;
+  const [before, mid, now] = milestones;
 
-  const xs = [40, 360, 680];
-  const anchors = ['start', 'middle', 'end'];
-  const nodeX = [48, 360, 672];
-  const timeline = milestones
-    .map((m, i) => {
-      const last = i === milestones.length - 1;
-      return [
-        `<circle cx="${nodeX[i]}" cy="232" r="${last ? 8 : 6}" fill="${last ? th.fg : th.bg}" stroke="${last ? th.fg : th.muted}" stroke-width="2"/>`,
-        text(xs[i], 264, m.when, { size: 17, cls: 'mono', fill: th.faint, anchor: anchors[i] }),
-        text(xs[i], 290, m.value, { size: 20, weight: 700, fill: th.fg, anchor: anchors[i] }),
-        text(xs[i], 314, m.unit, { size: 17, fill: th.muted, anchor: anchors[i] }),
-      ].join('\n');
-    })
-    .join('\n');
+  const beforeLines = wrap(before.value, 12);
+  const beforeSvg = [
+    text(40, 104, before.when, { size: 17, cls: 'mono', fill: th.faint }),
+    ...beforeLines.map((l, i) => text(40, 148 + i * 34, l, { size: 30, weight: 700, fill: th.fg })),
+    text(40, 148 + beforeLines.length * 34 + 2, before.unit, { size: 18, fill: th.muted }),
+  ].join('\n');
+
+  const nowSvg = [
+    text(680, 104, now.when, { size: 17, cls: 'mono', fill: th.faint, anchor: 'end' }),
+    text(680, 196, now.value, { size: 96, weight: 700, fill: th.fg, anchor: 'end' }),
+    text(680, 228, now.unit, { size: 20, fill: th.muted, anchor: 'end' }),
+  ].join('\n');
+
+  const arrow = `
+<line x1="246" y1="150" x2="448" y2="150" stroke="${th.muted}" stroke-width="1.5"/>
+<polygon points="458,150 446,143 446,157" fill="${th.muted}"/>
+<circle cx="351" cy="150" r="6" fill="${th.bg}" stroke="${th.muted}" stroke-width="2"/>
+${text(351, 126, mid.when, { size: 16, cls: 'mono', fill: th.faint, anchor: 'middle' })}
+${text(351, 184, mid.value, { size: 22, weight: 700, fill: th.fg, anchor: 'middle' })}
+${text(351, 206, mid.unit, { size: 16, fill: th.muted, anchor: 'middle' })}`;
 
   const eco = ecosystem.items
     .map((it, i) => {
       const x = i === 0 ? 40 : 360;
-      return `<text x="${x}" y="392" class="sans" fill="${th.fg}"><tspan font-size="24" font-weight="700">${esc(it.value)}</tspan><tspan dx="10" font-size="18" font-weight="400" fill="${th.muted}">${esc(it.label)}</tspan></text>`;
+      return `<text x="${x}" y="316" class="sans" fill="${th.fg}"><tspan font-size="24" font-weight="700">${esc(it.value)}</tspan><tspan dx="10" font-size="18" font-weight="400" fill="${th.muted}">${esc(it.label)}</tspan></text>`;
     })
     .join('\n');
 
   const body = `
-${text(40, 46, 'ENGINEERING IMPACT', { size: 16, cls: 'mono', fill: th.faint, spacing: '1.5' })}
-${text(680, 46, `${product.name.toUpperCase()} · ${product.company.toUpperCase()}`, { size: 16, cls: 'mono', fill: th.faint, anchor: 'end', spacing: '1' })}
-${text(34, 172, headline.value, { size: 120, weight: 700, fill: th.fg, length: 236 })}
-${text(300, 120, headline.label, { size: 28, weight: 600, fill: th.fg, length: 260 })}
-${text(300, 150, `${product.name} · ${headline.period}`, { size: 20, fill: th.muted })}
-${text(300, 178, 'A product metric, not an individual result.', { size: 18, fill: th.muted, length: 372 })}
-<line x1="48" y1="232" x2="672" y2="232" stroke="${th.faint}" stroke-width="1.5"/>
-${timeline}
-<line x1="40" y1="338" x2="680" y2="338" stroke="${th.line}"/>
-${text(40, 364, `${ecosystem.name.toUpperCase()} ECOSYSTEM · CONTEXT`, { size: 16, cls: 'mono', fill: th.faint, spacing: '1' })}
-${eco}`;
+${text(40, 46, `SINCE I JOINED ${product.company.toUpperCase()} · ${joined.toUpperCase()}`, { size: 16, cls: 'mono', fill: th.faint, spacing: '1.2' })}
+${text(680, 46, product.name.toUpperCase(), { size: 16, cls: 'mono', fill: th.faint, anchor: 'end', spacing: '1.2' })}
+${beforeSvg}
+${arrow}
+${nowSvg}
+<line x1="40" y1="256" x2="680" y2="256" stroke="${th.line}"/>
+${text(40, 284, `${ecosystem.name.toUpperCase()} ECOSYSTEM · CONTEXT`, { size: 16, cls: 'mono', fill: th.faint, spacing: '1' })}
+${eco}
+${text(40, 348, data.footnote, { size: 16, fill: th.faint })}`;
 
-  const milestoneText = milestones.map((m) => `${m.when}: ${m.value} ${m.unit}`).join('. ');
   const ecoText = ecosystem.items.map((i) => `${i.value} ${i.label}`).join(', ');
   return frame({
     width: W,
     height: H,
     th,
     body,
-    title: `Engineering impact: ${headline.value} ${headline.label} on ${product.name}`,
-    desc: `${product.name} (${product.company}) reached ${headline.value} ${headline.label} in ${headline.period}. ${milestoneText}. Context, ${ecosystem.name} ecosystem: ${ecoText}. ${data.disclaimer}`,
+    title: `${product.name} since joining ${product.company} in ${joined}: ${before.value} ${before.unit} to ${now.value} ${now.unit}`,
+    desc: `Joined ${product.company} in ${joined}. ${product.name}: ${before.when}, ${before.value} ${before.unit}. ${mid.when}, ${mid.value} ${mid.unit}. ${now.when}, ${now.value} ${now.unit}. Context, ${ecosystem.name} ecosystem: ${ecoText}. ${data.disclaimer}`,
   });
-}
-
-// ---------------------------------------------------------------- shipping
-
-const ROWS = [
-  { key: 'orbit', name: 'Orbit', blurb: 'Native macOS command center · Swift' },
-  { key: 'conclave', name: 'Conclave', blurb: 'Evidence-first PR review CLI · npm · MIT' },
-];
-
-export function renderShipping(th, shipping) {
-  const W = 720;
-  const H = 204;
-  const rows = ROWS.map((row, i) => {
-    const s = shipping[row.key];
-    const y = 84 + i * 64;
-    const pillW = Math.round(s.version.length * 10.2 + 22);
-    return [
-      `<circle cx="48" cy="${y - 7}" r="4.5" fill="${th.fg}"/>`,
-      text(64, y, row.name, { size: 24, weight: 700, fill: th.fg }),
-      `<rect x="214" y="${y - 22}" width="${pillW}" height="30" rx="8" fill="none" stroke="${th.faint}" stroke-width="1.2"/>`,
-      text(214 + pillW / 2, y - 2, s.version, { size: 17, cls: 'mono', fill: th.fg, anchor: 'middle' }),
-      text(680, y - 2, formatDate(s.date), { size: 20, fill: th.muted, anchor: 'end' }),
-      text(64, y + 26, row.blurb, { size: 18, fill: th.muted }),
-    ].join('\n');
-  }).join('\n');
-
-  const body = `
-${text(40, 40, 'NOW SHIPPING', { size: 16, cls: 'mono', fill: th.faint, spacing: '1.5' })}
-${text(680, 40, 'updated daily', { size: 16, cls: 'mono', fill: th.faint, anchor: 'end' })}
-${rows}`;
-
-  const summary = ROWS.map((r) => `${r.name} ${shipping[r.key].version} on ${formatDate(shipping[r.key].date)}`).join('. ');
-  return frame({
-    width: W,
-    height: H,
-    th,
-    body,
-    title: 'Now shipping',
-    desc: `Latest releases. ${summary}.`,
-  });
-}
-
-// ---------------------------------------------------------------- data
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-export async function fetchJson(url, { headers = {}, retries = 2, timeoutMs = 10_000, fetchImpl = fetch } = {}) {
-  let last;
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    try {
-      const res = await fetchImpl(url, {
-        headers: { 'user-agent': 'carvalhobfr-profile-widgets', accept: 'application/json', ...headers },
-        signal: AbortSignal.timeout(timeoutMs),
-      });
-      if (!res.ok) {
-        const err = new Error(`${url} -> HTTP ${res.status}`);
-        err.permanent = res.status >= 400 && res.status < 500 && res.status !== 429;
-        throw err;
-      }
-      return await res.json();
-    } catch (err) {
-      last = err;
-      if (err.permanent || attempt === retries) break;
-      await sleep(500 * 2 ** attempt);
-    }
-  }
-  throw last;
-}
-
-export const SOURCES = {
-  async orbit(getJson, env = {}) {
-    const headers = env.GITHUB_TOKEN ? { authorization: `Bearer ${env.GITHUB_TOKEN}` } : {};
-    const r = await getJson('https://api.github.com/repos/carvalhobfr/orbit-releases/releases/latest', { headers });
-    return { version: normalizeVersion(r.tag_name), date: new Date(r.published_at).toISOString(), url: String(r.html_url) };
-  },
-  async conclave(getJson) {
-    const r = await getJson('https://registry.npmjs.org/conclave-ai');
-    const latest = r['dist-tags']?.latest;
-    if (!latest || !r.time?.[latest]) throw new Error('npm registry: latest version or its date is missing');
-    return {
-      version: normalizeVersion(latest),
-      date: new Date(r.time[latest]).toISOString(),
-      url: `https://www.npmjs.com/package/conclave-ai/v/${latest}`,
-    };
-  },
-};
-
-// Fresh value when the API answers, cached value when it does not, error when neither exists.
-export async function collectShipping({ getJson, cache = {}, offline = false, env = {}, sources = SOURCES }) {
-  const data = {};
-  const warnings = [];
-  for (const key of Object.keys(sources)) {
-    if (!offline) {
-      try {
-        data[key] = await sources[key](getJson, env);
-        continue;
-      } catch (err) {
-        warnings.push(`${key}: ${err.message}${cache[key] ? ' (using cached value)' : ''}`);
-      }
-    }
-    if (cache[key]) data[key] = cache[key];
-    else warnings.push(`${key}: no cached value to fall back on`);
-  }
-  const missing = Object.keys(sources).filter((k) => !data[k]);
-  return { data, warnings, missing };
 }
 
 // ---------------------------------------------------------------- io
 
-async function readJson(file, { optional = false } = {}) {
+async function readJson(file) {
   try {
     return JSON.parse(await readFile(file, 'utf8'));
   } catch (err) {
-    if (optional && err.code === 'ENOENT') return undefined;
     throw new Error(`${path.relative(ROOT, file)}: ${err.message}`);
   }
 }
@@ -382,12 +283,11 @@ async function writeIfChanged(file, content) {
   return true;
 }
 
-export function renderAll(impact, shipping) {
+export function renderAll(impact) {
   const out = {};
   for (const [name, th] of Object.entries(THEMES)) {
     out[`hero-${name}.svg`] = renderHero(th);
     out[`impact-${name}.svg`] = renderImpact(th, impact);
-    out[`shipping-${name}.svg`] = renderShipping(th, shipping);
   }
   for (const [file, svg] of Object.entries(out)) {
     if (Buffer.byteLength(svg) > MAX_SVG_BYTES) throw new Error(`${file} is larger than ${MAX_SVG_BYTES} bytes`);
@@ -397,25 +297,10 @@ export function renderAll(impact, shipping) {
 }
 
 async function main() {
-  const offline = process.argv.includes('--offline');
-  const inActions = process.env.GITHUB_ACTIONS === 'true';
-  const warn = (msg) => (inActions ? console.log(`::warning::${msg}`) : console.warn(`warning: ${msg}`));
-
   assertContrast();
   const impact = validateImpact(await readJson(path.join(ROOT, 'data/impact.json')));
-  const cacheFile = path.join(ROOT, 'data/shipping.json');
-  const cache = (await readJson(cacheFile, { optional: true })) ?? {};
-
-  const { data, warnings, missing } = await collectShipping({ getJson: fetchJson, cache, offline, env: process.env });
-  warnings.forEach(warn);
-  if (missing.length) {
-    console.error(`error: no data for ${missing.join(', ')}; assets left untouched`);
-    process.exit(1);
-  }
-
-  const files = renderAll(impact, data);
+  const files = renderAll(impact);
   const changed = [];
-  if (await writeIfChanged(cacheFile, `${JSON.stringify(data, null, 2)}\n`)) changed.push('data/shipping.json');
   for (const [name, svg] of Object.entries(files)) {
     if (await writeIfChanged(path.join(ROOT, 'assets', name), svg)) changed.push(`assets/${name}`);
   }
