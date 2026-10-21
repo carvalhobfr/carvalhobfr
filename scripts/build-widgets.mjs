@@ -86,7 +86,7 @@ function text(x, y, content, { size = 16, weight = 400, fill, cls = 'sans', anch
     `fill="${fill}"`,
   ];
   if (anchor) attrs.push(`text-anchor="${anchor}"`);
-  if (length) attrs.push(`textLength="${length}"`, 'lengthAdjust="spacingAndGlyphs"');
+  if (length) attrs.push(`textLength="${length}"`, 'lengthAdjust="spacing"');
   if (spacing) attrs.push(`letter-spacing="${spacing}"`);
   return `<text ${attrs.join(' ')}>${esc(content)}</text>`;
 }
@@ -161,7 +161,7 @@ ${text(452, 212, '>_ api', { size: 18, cls: 'mono', fill: th.fg })}`;
   const body = `
 <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="15" fill="url(#dots)" mask="url(#m)"/>
 ${text(40, 104, 'Matheus Carvalho', { size: 42, weight: 700, fill: th.fg, length: 372 })}
-${text(40, 142, 'Software Engineer', { size: 20, fill: th.muted, length: 234 })}
+${text(40, 142, 'Software Engineer', { size: 24, fill: th.muted })}
 ${text(40, 172, 'Web products & media platforms', { size: 18, fill: th.faint, length: 280 })}
 ${chipsSvg}
 ${art}`;

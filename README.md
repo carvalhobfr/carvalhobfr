@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=cc18aab8">
-  <img src="assets/hero-light.svg?v=39ccad60" alt="Matheus Carvalho, Software Engineer building web and streaming applications with React, TypeScript and Node.js" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=01539c64">
+  <img src="assets/hero-light.svg?v=c0c90eb0" alt="Matheus Carvalho, Software Engineer building web and streaming applications with React, TypeScript and Node.js" width="720">
 </picture>
 
 <a href="https://matheuscarvalho.me" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://www.linkedin.com/in/matheusrcarvalho/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://matheuscarvalho.me/en/projects" target="_blank" rel="noopener noreferrer">Case studies</a>

@@ -54,3 +54,10 @@ test('every widget renders in both themes with title, desc and no placeholder te
   assert.match(files['impact-light.svg'], /published by Media Capital/);
   assert.match(files['impact-light.svg'], /Hundreds of/);
 });
+
+test('fixed-width text only adjusts letter spacing, never stretches glyphs', () => {
+  for (const svg of Object.values(renderAll(impact))) {
+    assert.doesNotMatch(svg, /spacingAndGlyphs/);
+  }
+  assert.match(renderAll(impact)['hero-light.svg'], /textLength="\d+" lengthAdjust="spacing"/);
+});
