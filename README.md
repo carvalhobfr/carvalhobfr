@@ -89,8 +89,8 @@ I have worked on TVI Player since **Nov 2021**. Since then it has grown from **h
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=ef43c40d">
-  <img src="assets/snake-light.svg?v=733f1590" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=77340c69">
+  <img src="assets/snake-light.svg?v=f7c8b400" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
 </picture>
 
 <a href="https://hub.xerj.org/contributors/carvalhobfr" target="_blank" rel="noopener noreferrer"><img src="https://hub.xerj.org/contributors/carvalhobfr/badge.svg" alt="XERJ Corpus Hub contributor"></a>
