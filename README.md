@@ -75,7 +75,7 @@ I have worked on TVI Player since **Nov 2021**. Since then it has grown from **h
 - **<a href="https://github.com/carvalhobfr/orbit-releases" target="_blank" rel="noopener noreferrer">Orbit</a>** · A native macOS command center in Swift (macOS 14+): workspaces, a rearrangeable menu bar panel, a command palette and Mac health. Closed source; builds are published at <a href="https://github.com/carvalhobfr/orbit-releases/releases" target="_blank" rel="noopener noreferrer">orbit-releases</a>.<br>
   <a href="https://github.com/carvalhobfr/orbit-releases/releases/latest" target="_blank" rel="noopener noreferrer">![Orbit release](https://img.shields.io/github/v/release/carvalhobfr/orbit-releases?style=flat-square&labelColor=30363d&color=57606a&label=release)</a>
 - **<a href="https://github.com/carvalhobfr/conclave-ai" target="_blank" rel="noopener noreferrer">Conclave</a>** · Open source (MIT). A PR companion that turns code changes into reviewable evidence: local and deterministic, no API key and no telemetry, read-only, with findings that point to a file and line. TypeScript, Node.js 20+.<br>
-  <a href="https://www.npmjs.com/package/conclave-ai" target="_blank" rel="noopener noreferrer">![npm version](https://img.shields.io/npm/v/conclave-ai?style=flat-square&labelColor=30363d&color=57606a&label=npm)</a> <a href="https://www.npmjs.com/package/conclave-ai" target="_blank" rel="noopener noreferrer">![npm downloads per month](https://img.shields.io/npm/dm/conclave-ai?style=flat-square&labelColor=30363d&color=57606a&label=downloads%2Fmonth)</a>
+  <a href="https://www.npmjs.com/package/conclave-ai" target="_blank" rel="noopener noreferrer">![npm version](https://img.shields.io/npm/v/conclave-ai?style=flat-square&labelColor=30363d&color=57606a&label=npm)</a> <a href="https://www.npmjs.com/package/conclave-ai" target="_blank" rel="noopener noreferrer">![npm downloads per month](https://img.shields.io/npm/dm/conclave-ai?style=flat-square&labelColor=30363d&color=57606a&label=downloads%2Fmonth)</a> <a href="https://hub.xerj.org/contributors/carvalhobfr" target="_blank" rel="noopener noreferrer"><img src="https://hub.xerj.org/contributors/carvalhobfr/badge.svg" alt="XERJ Corpus Hub contributor"></a>
 - **<a href="https://matheuscarvalho.me/en/tools/vast-inspector" target="_blank" rel="noopener noreferrer">VAST Inspector</a>** · A free tool for CTV ad tech: decode VAST tag URLs, review query parameters and catch common player-debugging issues. Runs locally in the browser.
 - **<a href="https://github.com/carvalhobfr/pokepilot" target="_blank" rel="noopener noreferrer">Pokepilot</a>** · Work in progress. Bots play the real Pokémon Blue ROM on an emulator, and every bit of progress is verified in cartridge RAM instead of trusted from a script. Python, PyBoy.
 
@@ -92,7 +92,5 @@ I have worked on TVI Player since **Nov 2021**. Since then it has grown from **h
   <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=77340c69">
   <img src="assets/snake-light.svg?v=f7c8b400" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
 </picture>
-
-<a href="https://hub.xerj.org/contributors/carvalhobfr" target="_blank" rel="noopener noreferrer"><img src="https://hub.xerj.org/contributors/carvalhobfr/badge.svg" alt="XERJ Corpus Hub contributor"></a>
 
 </div>
