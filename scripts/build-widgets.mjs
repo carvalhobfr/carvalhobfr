@@ -192,7 +192,7 @@ export function validateImpact(data) {
   need(Array.isArray(data.milestones) && data.milestones.length === 3, 'exactly 3 milestones expected (before, middle, now)');
   for (const m of data.milestones) {
     need(m.when && m.value && m.unit, 'milestone needs when/value/unit');
-    need(m.source?.name && (/^https:\/\//.test(m.source?.url ?? '')), `milestone ${m.when} needs a published source URL or an explicit personal_estimate flag`);
+    need(m.source?.name && /^https:\/\//.test(m.source?.url ?? ''), `milestone ${m.when} needs a source with an https url`);
   }
   const e = data.ecosystem;
   need(e?.name && Array.isArray(e.items) && e.items.length === 2, 'ecosystem.name and exactly 2 items required');

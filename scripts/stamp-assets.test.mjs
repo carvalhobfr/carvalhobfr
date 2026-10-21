@@ -21,3 +21,7 @@ test('hash changes with content and is 8 hex characters', () => {
   assert.match(hashOf('a'), /^[0-9a-f]{8}$/);
   assert.notEqual(hashOf('a'), hashOf('b'));
 });
+
+test('replaces non-hex version tokens left by manual edits', () => {
+  assert.equal(stamp('<img src="assets/hero-dark.svg?v=softwareengineer2">', hashes), '<img src="assets/hero-dark.svg?v=aaaaaaaa">');
+});

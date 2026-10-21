@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=softwareengineer2">
-  <img src="assets/hero-light.svg?v=softwareengineer2" alt="Matheus Carvalho, Software Engineer building web and streaming applications with React, TypeScript and Node.js" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=cc18aab8">
+  <img src="assets/hero-light.svg?v=39ccad60" alt="Matheus Carvalho, Software Engineer building web and streaming applications with React, TypeScript and Node.js" width="720">
 </picture>
 
 <a href="https://matheuscarvalho.me" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://www.linkedin.com/in/matheusrcarvalho/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://matheuscarvalho.me/en/projects" target="_blank" rel="noopener noreferrer">Case studies</a>
@@ -17,12 +17,12 @@ I build web and streaming applications with React, TypeScript and Node.js. Since
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=2020source">
-  <img src="assets/impact-light.svg?v=2020source" alt="Since I joined Media Capital in Nov 2021: TVI Player had about 1M monthly unique users in 2020 (before my tenure), about 1M in 2024, and 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. Figures are from published reports; 2020 predates my tenure." width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg?v=8a40c371">
+  <img src="assets/impact-light.svg?v=940d03c9" alt="Since I joined Media Capital in Nov 2021: TVI Player went from hundreds of thousands of monthly users in Dec 2022, to about 1M monthly unique users in 2024, to 2M+ in May 2025. Context: Media Capital Digital has 4M+ monthly unique users and 2.5B pageviews in 2025. Figures published by Media Capital." width="720">
 </picture>
 </div>
 
-I have worked on TVI Player since **Nov 2021**. Media Capital reported approximately **1M monthly unique users in 2020** (before I joined), **~1M in 2024**, and **2M+ in May 2025**. These are published product figures, not individual results; reporting methodologies may differ. Sources: <a href="https://media.iolnegocios.pt/media1201/4837e5caf7a122e68cf270eb898bde61/" target="_blank" rel="noopener noreferrer">Media Capital, 2020 annual report</a>, <a href="https://mediacapital.pt/tvi-player-chega-a-apple-tv/" target="_blank" rel="noopener noreferrer">2021 figures</a>, <a href="https://mediacapital.pt/wp-content/uploads/2025/05/deae7d5f9aed81ae1323fef2d4276ac8.pdf" target="_blank" rel="noopener noreferrer">2024 report</a>, <a href="https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades" target="_blank" rel="noopener noreferrer">MC News</a>, <a href="https://eco.sapo.pt/2026/03/29/tvi-acelera-sic-ainda-a-procura-de-futuro/" target="_blank" rel="noopener noreferrer">ECO</a>.
+I have worked on TVI Player since **Nov 2021**. Since then it has grown from **hundreds of thousands of monthly users** (Dec 2022, the earliest public figure) to **2M+ monthly unique users** (May 2025). These are published product figures, not individual results. Sources: <a href="https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/" target="_blank" rel="noopener noreferrer">Media Capital, Fire TV launch</a>, <a href="https://mediacapital.pt/wp-content/uploads/2025/05/deae7d5f9aed81ae1323fef2d4276ac8.pdf" target="_blank" rel="noopener noreferrer">2024 report</a>, <a href="https://mcnews.iol.pt/geral/21-05-2025/o-tvi-player-mudou-experimente-ja-as-novas-funcionalidades" target="_blank" rel="noopener noreferrer">MC News</a>, <a href="https://eco.sapo.pt/2026/03/29/tvi-acelera-sic-ainda-a-procura-de-futuro/" target="_blank" rel="noopener noreferrer">ECO</a>.
 
 ## Professional work
 

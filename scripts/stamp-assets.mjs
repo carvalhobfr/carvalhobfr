@@ -15,7 +15,7 @@ export function hashOf(content) {
 
 // hashes: { 'hero-dark.svg': 'a1b2c3d4', ... }. References to unknown files are left alone.
 export function stamp(readme, hashes) {
-  return readme.replace(/assets\/([A-Za-z0-9_-]+\.svg)(\?v=[0-9a-f]+)?/g, (match, name) =>
+  return readme.replace(/assets\/([A-Za-z0-9_-]+\.svg)(\?v=[0-9A-Za-z]+)?/g, (match, name) =>
     hashes[name] ? `assets/${name}?v=${hashes[name]}` : match,
   );
 }

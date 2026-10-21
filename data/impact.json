@@ -21,12 +21,12 @@
   },
   "milestones": [
     {
-      "when": "2020",
-      "value": "~1M",
-      "unit": "monthly unique users",
+      "when": "Dec 2022",
+      "value": "Hundreds of thousands",
+      "unit": "monthly users",
       "source": {
-        "name": "Media Capital, 2020 annual report",
-        "url": "https://media.iolnegocios.pt/media1201/4837e5caf7a122e68cf270eb898bde61/"
+        "name": "Media Capital, Amazon Fire TV launch",
+        "url": "https://mediacapital.pt/tvi-player-chega-a-amazon-fire-tv/"
       }
     },
     {
@@ -71,6 +71,6 @@
       }
     ]
   },
-  "footnote": "Figures published by Media Capital; not individual results.",
-  "disclaimer": "Published product figures, not personal contributions. The 2020 baseline predates my Nov 2021 start. Reporting methods may differ."
+  "footnote": "Product and ecosystem figures published by Media Capital.",
+  "disclaimer": "Product and ecosystem metrics published by Media Capital. They describe the product and the group, not individual results. The earliest public TVI Player figure is from Dec 2022."
 }
