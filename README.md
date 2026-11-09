@@ -89,8 +89,8 @@ I have worked on TVI Player since **Nov 2021**. Since then it has grown from **h
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=cf624ce5">
-  <img src="assets/snake-light.svg?v=8050fe65" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=03b3e3c5">
+  <img src="assets/snake-light.svg?v=15adb4a5" alt="Contribution graph of carvalhobfr, eaten by a snake" width="720">
 </picture>
 
 </div>
